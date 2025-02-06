@@ -1,0 +1,10 @@
+Version: 0.6
+Fertigstellung: bis 25.02.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Der Benutzer link per E-Mail versenden. Beim Drucken des Buttons
+wird E-Mail-Programm aufgemacht und ein Linkt mit der Default (änderbar in der E-Mail) Beschreibung
+wird hinzugefügt.

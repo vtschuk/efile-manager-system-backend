@@ -1,0 +1,9 @@
+Version: 2.4
+Fertigstellung: ab 01.05.2025
+Name: File Management System
+Mobile: Kotlin
+
+Ziel: Pflege, Anpassung, Fehlerkorrektur. Marketing des Produkts. Entwicklungsziel ist jetzt abgeschlossen.
+Weitere Implementierungen können im Abstimmung mit dem Kunden erfolgen. Es wird Zeit für ein weiteres Produkt ;-)
+
+

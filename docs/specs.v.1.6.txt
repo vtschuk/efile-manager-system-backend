@@ -1,0 +1,9 @@
+Version: 01.04.2025
+Fertigstellung: bis 28.03.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Der Benutzer kann jetzt eine Uploadmöglichkteit geben für die Benutzer, mit denen er sein Archiv
+über das Internet teilen möchte.

@@ -1,0 +1,9 @@
+Version: 0.8
+Fertigstellung: bis 04.03.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Die Dateien, zeigen von welcher IP-Adresse und wann (Urzeit) wurden sie heruntergeladen.
+Max. 5 letzten IPs.

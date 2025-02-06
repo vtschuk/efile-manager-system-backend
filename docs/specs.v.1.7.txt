@@ -1,0 +1,9 @@
+Version: 1.7
+Fertigstellung: bis 01.04.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Archiv kann jetzt beim Teile auch als tar heruntergeladen werden können.
+Benutzer kann das beim Teilen einstellen. Das Archiv ist dann auf 1 GByte beschränkt.

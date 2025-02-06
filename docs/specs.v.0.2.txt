@@ -1,0 +1,10 @@
+Version: 0.2
+Fertigstellung: bis 12.02.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Es muss aus der Application v.0.1 möglich sein ein erstelltes Archiv in Internet zu stellen
+der über einen Link aufgerufen werden kann. Das Archiv übers Netzwerk darf nur lesend sein, Dateien können aber
+heruntergeladen werden.

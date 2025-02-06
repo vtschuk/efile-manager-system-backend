@@ -1,0 +1,43 @@
+Version: 0.1
+Fertigstellung: bis 09.02.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Ablage von Dateien bis 100 MByte
+Ablage von bis zu 10 Dateien in einem Archiv.
+Es können mehrere Archive erstellt werden, die auf der Oberfläche als Tabelle dargestellt werden.
+Es muss im Fehlerfall eine Meldung angezeigt werden.
+
+Features der Version: 0.1
+
+1. Anlegen des Archivs
+2. Löschen des Archivs
+3. Navigation zum Archiv
+4. Hochladen/Herunterladen einer Datei ins Archiv
+5. Löschen der Hochgeladenen Datei aus dem Archiv
+6. Application soll im Docker laufen
+
+Zwischenschritte:
+
+1. Backend:
+1.1. Git, GitLab, Init Commit
+1.2. Anbinden einer Datenbank (MySQL)
+1.3  Rest Schnittstelle spezifizieren
+1.4  Test und Implementierung von Rest
+1.5 Services spezifizieren und anbinden
+1.6 Test und Implementierung von Services
+1.7 Anbindung der Datenbank an Services
+1.8 Implementierung und Test von Docker
+
+2. Frontend
+2.1 Git, GitLab, Init Commit
+2.2 Archiv Komponente anlegen
+2.3 Overview Komponente anlegen
+2.4 Test (Cypress) und Navigation zwischen den Komponenten
+2.5  Fehlermeldung einbinden
+2.6  Test und Implementierung von Services (Kommunikation mit dem Backend)
+2.7 Implementierung und Test von Docker
+
+3. Testen und Ausrollen der gesamten Applikation.

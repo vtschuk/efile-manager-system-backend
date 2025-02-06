@@ -1,0 +1,9 @@
+Version: 1.4
+Fertigstellung: bis 23.03.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Applikation löscht nach einer einstellbaren Zeit links zu geteilten Archiven,
+IPs von Benutzern, die Dateien heruntergeladen haben.

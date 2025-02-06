@@ -1,0 +1,9 @@
+Version: 0.9
+Fertigstellung: bis 04.03.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Beim Zugriff auf die Datei von Ausserhalb wird der Benutzer über Datenschutz und Datenverarbeitung
+informiert.

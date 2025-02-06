@@ -1,0 +1,6 @@
+Version: 2.1
+Fertigstellung: bis 18.04.2025
+Name: File Management System
+Mobile: Kotlin
+
+Ziel: Für Benutzer ist es möglich im Frontend die Archive nach Wörtern in Texten durchzusuchen,

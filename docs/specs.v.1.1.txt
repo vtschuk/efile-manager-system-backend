@@ -1,0 +1,8 @@
+Version: 1.1
+Fertigstellung: bis 09.03.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Applikation wird weiter internationalisiert. Die kann jetzt auch Englisch.

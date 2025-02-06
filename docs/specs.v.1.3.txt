@@ -1,0 +1,8 @@
+Version: 1.3
+Fertigstellung: bis 16.03.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Applikation ist jetzt mehrbenutzerfähig, Archiv ist jeztz Ordner

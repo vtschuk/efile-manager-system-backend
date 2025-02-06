@@ -1,0 +1,7 @@
+Version: 2.0
+Fertigstellung: bis 14.04.2025
+Name: File Management System
+Mobile: Kotlin
+
+
+Ziel: Die Smartphone App hat jetzt Zugriff auf Kamera und kann automatisch Bilder und Videos hochladen.

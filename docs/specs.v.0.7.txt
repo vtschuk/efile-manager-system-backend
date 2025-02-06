@@ -1,0 +1,9 @@
+Version: 0.7
+Fertigstellung: bis 28.02.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Die E-Mail und die Urzeit, an die ein Archivlink gesenden war, wird im Archiv angezeigt.
+Max. 5 E-Mails

@@ -1,0 +1,9 @@
+Version: 0.4
+Fertigstellung: bis 20.02.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Der Benutzer soll zu jeder Datei im Archiv einen Namen und kleine Beschreibung
+hinzufügen können.

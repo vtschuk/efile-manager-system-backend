@@ -1,0 +1,9 @@
+Version: 0.3
+Fertigstellung: bis 16.02.2025
+Name: File Management System
+Datenbank: MySQL
+Backend: Java, Spring Framework
+Frontend: TypeScript, Angular
+
+Ziel: Es muss im Internet oder im Frontend eine Möglichkeit geben, ein Archiv mit einem Passwort zu schützen
+Das Archiv mit einem Password darf dann über einen Link nur mit diesem Password zugängig sein.
