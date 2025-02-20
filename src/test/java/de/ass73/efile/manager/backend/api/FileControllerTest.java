@@ -1,7 +1,6 @@
 package de.ass73.efile.manager.backend.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import de.ass73.efile.manager.backend.model.DirectoryModel;
 import de.ass73.efile.manager.backend.model.FileModel;
 import de.ass73.efile.manager.backend.service.FileService;
 import org.junit.jupiter.api.Assertions;
@@ -40,7 +39,7 @@ public class FileControllerTest {
 
         Mockito.when(fileService.getAllFilesFromDirectory(anyLong())).thenReturn(List.of(fileModel));
 
-        MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/file/1")
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/file/dir/1")
                 .header(HttpHeaders.AUTHORIZATION, "Bearer Test")
         ).andExpect(status().isOk()).andReturn();
 
@@ -51,8 +50,20 @@ public class FileControllerTest {
     }
 
     @Test
-    public void getFileById() {
+    public void getFileById() throws Exception {
+        FileModel fileModel = FileModel.builder()
+                .id(new Random().nextLong())
+                .name("")
+                .build();
+        Mockito.when(fileService.getFileById(anyLong())).thenReturn(fileModel);
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/file/1")
+                .header(HttpHeaders.AUTHORIZATION, "Bearer Test")
+        ).andExpect(status().isFound()).andReturn();
 
+        var returnValue = result.getResponse().getContentAsString();
+        var expectedValue = objectMapper.writeValueAsString(fileModel);
+
+        Assertions.assertEquals(returnValue, expectedValue);
     }
 
     @Test

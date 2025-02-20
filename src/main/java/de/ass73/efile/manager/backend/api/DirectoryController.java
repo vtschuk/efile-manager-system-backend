@@ -33,6 +33,6 @@ public class DirectoryController {
     }
 
     public void deleteDirectory() {
-         directoryService.deleteDirectory();
+        directoryService.deleteDirectory();
     }
 }

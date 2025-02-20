@@ -18,11 +18,13 @@ public class FileController {
     private FileService fileService;
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping(value = "/{id}", produces = "application/json")
+    @GetMapping(value = "/dir/{id}", produces = "application/json")
     public ResponseEntity<List<FileModel>> getAllFilesFromDirectory(@PathVariable Long id) {
         return new ResponseEntity<>(fileService.getAllFilesFromDirectory(id), HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping(value = "/{id}", produces = "application/json")
     public ResponseEntity<FileModel> getFileById(@PathVariable Long id) {
         return new ResponseEntity<>(fileService.getFileById(id), HttpStatus.FOUND);
     }

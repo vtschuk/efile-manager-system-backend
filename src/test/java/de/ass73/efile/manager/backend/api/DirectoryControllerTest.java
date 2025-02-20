@@ -17,6 +17,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import java.util.List;
 import java.util.Random;
 
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(DirectoryController.class)
@@ -27,7 +28,8 @@ public class DirectoryControllerTest {
     @MockitoBean
     private DirectoryService directoryService;
 
-    private  ObjectMapper objectMapper = new ObjectMapper();
+    private ObjectMapper objectMapper = new ObjectMapper();
+
     @Test
     public void getAllDirectories() throws Exception {
         DirectoryModel directoryModel = DirectoryModel.builder()
@@ -48,12 +50,29 @@ public class DirectoryControllerTest {
     }
 
     @Test
-    public void downloadDirectoryTest() {
+    public void getDirectoryById() throws Exception {
+        DirectoryModel directoryModel = DirectoryModel.builder()
+                .id(new Random().nextLong())
+                .name("")
+                .build();
+        Mockito.when(directoryService.getDirectoryById(anyLong())).thenReturn(directoryModel);
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/directory/1")
+                .header(HttpHeaders.AUTHORIZATION, "Bearer Test")
+        ).andExpect(status().isFound()).andReturn();
+
+        var returnValue = result.getResponse().getContentAsString();
+        var expectedValue = objectMapper.writeValueAsString(directoryModel);
+
+        Assertions.assertEquals(returnValue, expectedValue);
+    }
+
+    @Test
+    public void createDirectory() {
 
     }
 
     @Test
-    public void deleteDirectoryTest() {
+    public void deleteDirectory() {
 
     }
 }
