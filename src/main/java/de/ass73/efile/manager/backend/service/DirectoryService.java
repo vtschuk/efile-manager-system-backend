@@ -20,6 +20,5 @@ public class DirectoryService {
     }
 
     public void deleteDirectory() {
-        return;
     }
 }
