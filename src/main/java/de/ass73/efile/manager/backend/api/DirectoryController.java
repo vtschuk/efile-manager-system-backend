@@ -2,7 +2,6 @@ package de.ass73.efile.manager.backend.api;
 
 import de.ass73.efile.manager.backend.model.DirectoryModel;
 import de.ass73.efile.manager.backend.service.DirectoryService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +22,8 @@ public class DirectoryController {
         return new ResponseEntity<>(directoryService.getAllDirectories(), HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping(value = "/{id}", produces = "application/json")
     public ResponseEntity<DirectoryModel> getDirectoryById(@PathVariable Long id) {
         return new ResponseEntity<>(directoryService.getDirectoryById(id), HttpStatus.FOUND);
     }
