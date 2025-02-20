@@ -9,6 +9,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -67,8 +68,20 @@ public class DirectoryControllerTest {
     }
 
     @Test
-    public void createDirectory() {
+    public void createDirectory() throws Exception {
+        DirectoryModel directoryModel = DirectoryModel.builder()
+                .id(new Random().nextLong())
+                .name("")
+                .build();
+        Mockito.when(directoryService.createDirectory(directoryModel)).thenReturn(directoryModel);
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.post("/directory")
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+                        .content(objectMapper.writeValueAsString(directoryModel))
+                ).andExpect(status().isCreated()).andReturn();
+        var returnValue = result.getResponse().getContentAsString();
+        var expectedValue = objectMapper.writeValueAsString(directoryModel);
 
+        Assertions.assertEquals(returnValue, expectedValue);
     }
 
     @Test

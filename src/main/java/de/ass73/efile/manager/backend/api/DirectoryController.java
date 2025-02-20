@@ -28,11 +28,15 @@ public class DirectoryController {
         return new ResponseEntity<>(directoryService.getDirectoryById(id), HttpStatus.FOUND);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PostMapping(value = "", produces = "application/json")
     public ResponseEntity<DirectoryModel> createDirectory(@RequestBody DirectoryModel directoryModel) {
         return new ResponseEntity<>(directoryService.createDirectory(directoryModel), HttpStatus.CREATED);
     }
 
-    public void deleteDirectory() {
-        directoryService.deleteDirectory();
+    @CrossOrigin(origins = "http://localhost:4200")
+    @DeleteMapping("/{id}")
+    public void deleteDirectory(@PathVariable Long id) {
+        directoryService.deleteDirectory(id);
     }
 }

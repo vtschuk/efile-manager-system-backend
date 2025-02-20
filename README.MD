@@ -8,4 +8,7 @@ mvn clean package spring-boot:run -DskipTests
 empty Empty MYSQL Database on Port 3306
 
 # Build a Docker Image
-docker buidl -t my-java-app .
+docker build -t my-java-app .
+
+# Start Docker
+docker run -d ...

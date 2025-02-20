@@ -19,6 +19,6 @@ public class DirectoryService {
         return new DirectoryModel();
     }
 
-    public void deleteDirectory() {
+    public void deleteDirectory(Long id) {
     }
 }
